@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f2f2f2;
+            padding: 10px 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header span {
+            font-weight: bold;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        h4 {
+            margin: 0 0 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Миссия Колонизация Марса</h1>
+        <span>Mars One</span>
+    </div>
+    <div class="main-content">
+        <h4>И на Марсе будут яблони цвести!</h4>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

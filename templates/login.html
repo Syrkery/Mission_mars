@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="mission-logo-wrapper">
+        <img class="mission-logo" src="{{ url_for('static', filename='img/mars_logo.png') }}" alt="Эмблема миссии"><h2>Аварийный доступ</h2>
+    </div>
+    <form method="post">
+        <div class="form-group">
+            <label for="astronaut_id">Id астронавта</label>
+            <input type="text" id="astronaut_id" name="astronaut_id">
+        </div>
+        <div class="form-group">
+            <label for="astronaut_password">Пароль астронавта</label>
+            <input type="password" id="astronaut_password" name="astronaut_password">
+        </div>
+        <div class="form-group">
+            <label for="captain_id">Id капитана (или заместителя)</label>
+            <input type="text" id="captain_id" name="captain_id">
+        </div>
+        <div class="form-group">
+            <label for="captain_token">Пароль капитана (или заместителя)</label>
+            <input type="password" id="captain_token" name="captain_token">
+        </div>
+        <button type="submit">Доступ</button>
+    </form>
+{% endblock %}

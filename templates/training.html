@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ heading }}</h2>
+    <img src="{{ url_for('static', filename=image) }}" alt="Схема расположения тренажёров" style="max-width: 100%; height: auto;">
+{% endblock %}
+
